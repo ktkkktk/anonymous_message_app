@@ -1,4 +1,4 @@
-# Request for Proposal for Anonymous Message Application
+# Project brief of Anonymous Message Application
 
 ## 背景
 * 某匿名メッセージアプリが便利で使っていたが、運営の思想が苦手
@@ -21,7 +21,7 @@
 * 長文の回答
 
 ## スケジュール
-* 2019年8月中
+* 1st phase: 2019年8月中
 
 ## ターゲット
 * 自分（受信者）
