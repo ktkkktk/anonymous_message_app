@@ -1,8 +1,8 @@
-https://message-cards-trial-2019summer.herokuapp.com/
+https://message-cards-trial-2019summer.herokuapp.com/  
 
-以下のアカウントでログイン可能
-email: "test@test.com"
-password: "test"
+以下のアカウントでログイン可能  
+email: "test@test.com"  
+password: "test"  
 
 ==================================
 # README
