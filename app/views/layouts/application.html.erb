@@ -18,8 +18,8 @@
         <nav class="navbar navbar-expand navbar-light bg-primary">
           <%= link_to 'Message Card', root_path, class:"nav-item", id:'app-logo' %>
           <% if current_user %>
-            <%= link_to 'My Page', user_path, class: "ja-subheading nav-item nav-link" %>
-            <%= link_to 'Setting', settings_path, class: "ja-subheading nav-item nav-link" %>
+            <%= link_to 'My Page', user_path(current_user), class: "ja-subheading nav-item nav-link" %>
+            <%= link_to 'Settings', setting_path(current_user), class: "ja-subheading nav-item nav-link" %>
             <%= link_to 'Logout', logout_path, method: :delete, class: "ja-subheading nav-item nav-link" %>
           <% end %>
         </nav>

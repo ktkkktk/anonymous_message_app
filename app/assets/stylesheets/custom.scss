@@ -102,12 +102,17 @@ nav {
     
     #app-logo {
         @extend .ja-display1;
+        margin-right: 50px;
     }
+}
+
+header {
+    margin-bottom: 50px;
 }
 
 footer {
     height: 100px;
-    margin-top: 20px;
+    margin-top: 50px;
     background-color: $primary;
     @extend .ja-caption;
     text-align: center;
@@ -121,4 +126,19 @@ footer {
     padding-top: 2%;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.mini-card {
+    height: 253px;
+    border-radius: 20px;
+    margin: 10px 10px;
+    // padding-top: 2%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    .square {
+       width: 100%;
+       height: 100%;
+       background: white;
+       border-radius: 20px;
+    }
+}
+
 
