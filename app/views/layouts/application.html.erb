@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AnonymousMessageApp</title>
+
+    <title>Message Cards</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="container">
+      <header>
+        <nav class="navbar navbar-expand navbar-light bg-primary">
+          <%= link_to 'Message Card', root_path, class:"nav-item", id:'app-logo' %>
+          <% if current_user %>
+            <%= link_to 'My Page', user_path, class: "ja-subheading nav-item nav-link" %>
+            <%= link_to 'Setting', settings_path, class: "ja-subheading nav-item nav-link" %>
+            <%= link_to 'Logout', logout_path, method: :delete, class: "ja-subheading nav-item nav-link" %>
+          <% end %>
+        </nav>
+      </header>
+      
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "#{key}") %>
+      <% end %>
+
+      <%= yield %>
+      <footer>
+        <span class="align-bottom">このアプリについて</span>
+      </footer>
+      
+    </div> <!-- End of container -->
   </body>
 </html>

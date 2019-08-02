@@ -1,0 +1,16 @@
+<div class="row justify-content-center h-75">
+    <div class="bg-primary col-md-6  card main-card border border-0">
+      <div class="card-body">
+        <h2 class="card-title">メッセージカードを送ろう</h2>
+        <%= form_for(:session, url: login_path) do |f| %>
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control' %>
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control' %>
+            <%= f.submit "Log in", class: 'btn btn-secondary' %>
+        <% end %>
+      </div>
+    </div>
+</div>
+
+

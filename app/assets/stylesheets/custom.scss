@@ -1,0 +1,124 @@
+
+$primary:       #FFED8C;
+$secondary:     #FFC700;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default;
+
+$link-color:                              gray;
+// $link-decoration:                         none !default;
+$link-hover-color:                        black;
+$link-hover-decoration:                   none;
+
+@import "bootstrap";
+
+/*text setting*/
+
+.ja-hero {
+    font-style: bold;
+    font-size: 52px;
+    line-height: 75px;
+}
+
+.ja-display2 {
+    font-style: bold;
+    font-size: 45px;
+    line-height: 65px;
+}
+
+.ja-display1 {
+    font-style: bold;
+    font-size: 34px;
+    line-height: 50px;
+}
+
+.ja-heading {
+    font-style: bold;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.ja-title {
+    font-style: bold;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.ja-subheading {
+    font-style: bold;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.ja-bold {
+    font-style: bold;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+.ja-body {
+    font-style: regular;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.ja-button {
+    font-style: bold;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.ja-caption {
+    font-style: regular;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+
+/* Main */
+
+body {
+    font-family:'Noto Sans JP';
+}
+
+a {
+    @extend .ja-bold;
+}
+
+nav {
+    div {
+        margin-left: 5%;
+        margin-right: 5%;
+        @extend .ja-display1;
+    }
+    
+    a {
+        @extend .ja-subheading;
+    }
+    
+    #app-logo {
+        @extend .ja-display1;
+    }
+}
+
+footer {
+    height: 100px;
+    margin-top: 20px;
+    background-color: $primary;
+    @extend .ja-caption;
+    text-align: center;
+}
+
+.main-card {
+    // width: 728px;
+    height: 455px;
+    border-radius: 20px;
+    margin: 5% 0%;
+    padding-top: 2%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
