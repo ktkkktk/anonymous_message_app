@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_01_114158) do
+ActiveRecord::Schema.define(version: 2019_08_03_021844) do
+
+  create_table "message_cards", force: :cascade do |t|
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id", "created_at"], name: "index_message_cards_on_user_id_and_created_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false

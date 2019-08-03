@@ -1,0 +1,11 @@
+<% card_str_limit = 120 %>
+
+<div class="bg-primary col-md-4  card mini-card border border-0">
+  <div class="card-body">
+    <div class="square">
+      <% card_string = message_card.content %>
+      <% card_string.slice!(card_str_limit, card_string.size) %>
+      <p><%= card_string %></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+module MessageCardsHelper
+end

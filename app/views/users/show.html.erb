@@ -1,19 +1,22 @@
-<div class="row justify-content-center h-75">
-  <div class="bg-primary col-md-4  card mini-card border border-0">
-    <div class="card-body">
-      <div class="square"></div>
+<% if logged_in? %>
+  <div class="row justify-content-center h-75">
+    <%= render @message_cards%>
+  </div>
+  <div class="row justify-content-center h-75">
+    <%= will_paginate @message_cards%>
+  </div>
+<% else %>
+  <div class="row justify-content-center h-75">
+    <div class="bg-primary col-md-6  card main-card  border border-0">
+      <div class="card-body">
+        <%= form_for(:message_card, url: card_path) do |f|%>
+          <%= f.text_area :content, size: "1x12", class: 'form-control', placeholder: "メッセージを入力してください" %>
+          <%= f.hidden_field :user_id, :value => params[:id] %>
+          <div class="button_center">
+            <%= f.submit "送る", class: "btn btn-secondary"%>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
-  <div class="bg-primary col-md-4  card mini-card border border-0">
-    <div class="card-body">
-    </div>
-  </div>
-  <div class="bg-primary col-md-4  card mini-card border border-0">
-    <div class="card-body">
-    </div>
-  </div>
-  <div class="bg-primary col-md-4  card mini-card border border-0">
-    <div class="card-body">
-    </div>
-  </div>
-</div>
+<% end %>

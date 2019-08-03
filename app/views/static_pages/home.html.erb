@@ -7,7 +7,12 @@
             <%= f.email_field :email, class: 'form-control' %>
             <%= f.label :password %>
             <%= f.password_field :password, class: 'form-control' %>
-            <%= f.submit "Log in", class: 'btn btn-secondary' %>
+            <div class="button_center">
+              <%= f.submit "Log in", class: 'btn btn-secondary' %>
+              <p class="ja-caption mt-3 mb-2">メール：test@test.com<br>パスワード：test<br>でお試しログインできます。</p>
+              <%= link_to "お試しメッセージ送信画面", user_path(1), class:"ja-caption mt-3" %>
+              <p class="ja-caption mt-1">メッセージを送信後、上のユーザーでログインすると<br>送ったメッセージを確認できます。</p>
+            </div>
         <% end %>
       </div>
     </div>

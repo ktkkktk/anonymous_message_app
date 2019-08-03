@@ -38,8 +38,8 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     user = users(:tanaka)
     get user_path(user)
     assert_template 'users/show'
-    
-    ######TODO: test for Card form######
+    assert_select 'textarea'
+    assert_select 'form input[type=submit]'
   end
     
   test "user page after log-in" do
