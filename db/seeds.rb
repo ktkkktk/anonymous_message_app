@@ -10,4 +10,4 @@ user.message_cards.create!(content: long_jp)
 end
 
 User.create!(email: 'vacant875@gmail.com',
-             password: 'saboten875')
+             password: 'password')
