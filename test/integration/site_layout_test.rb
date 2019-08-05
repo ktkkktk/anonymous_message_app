@@ -6,7 +6,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', root_path
     ### assert_select 'a[href=?]', user_path(), false
     ### assert_select 'a[href=?]', setting_path(), false
-    assert_select 'a[href=?]', logout_path, false
+    # assert_select 'a[href=?]', logout_path, false
   end
   
   test "header menu after log-in" do

@@ -128,18 +128,20 @@ footer {
 }
 
 .mini-card {
-    height: 253px;
-    border-radius: 20px;
-    margin: 10px 10px;
-    // padding-top: 2%;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    .square {
-       width: 100%;
-       height: 100%;
-       background: white;
-       border-radius: 20px;
-       padding: 3%;
-    }
+    // a {
+        height: 253px;
+        border-radius: 20px;
+        margin: 10px 10px;
+        // padding-top: 2%;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        .square {
+           width: 100%;
+           height: 100%;
+           background: white;
+           border-radius: 20px;
+           padding: 3%;
+        }
+    // }
 }
 #message_cards_content {
     width: 100%;

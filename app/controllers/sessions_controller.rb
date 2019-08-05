@@ -13,7 +13,11 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     @current_user = nil
-    redirect_to root_url
+    if request.referrer == root_url
+      redirect_to user_path(1)
+    else
+      redirect_to root_url
+    end
   end
   
 end
