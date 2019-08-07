@@ -128,24 +128,49 @@ footer {
 }
 
 .mini-card {
-    // a {
-        height: 253px;
+    height: 253px;
+    border-radius: 20px;
+    margin: 10px 10px;
+    // padding: 2%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    .mini-square {
+        position: relative;
+        width: 100%;
+        height: 220px;
+        background: white;
         border-radius: 20px;
-        margin: 10px 10px;
-        // padding-top: 2%;
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-        .square {
-           width: 100%;
-           height: 100%;
-           background: white;
-           border-radius: 20px;
-           padding: 3%;
+        padding: 3%;
+        .mini-controls{
+            position: absolute;
+            bottom: 5px; 
+            right: 10px;
         }
-    // }
+
+    }
 }
-#message_cards_content {
-    width: 100%;
-    height: 320px;
+
+.line-reduce{
+     width: 100%;
+     height: 90%;
+     overflow: hidden;  
+     text-overflow: ellipsis;  
+     -webkit-text-overflow: ellipsis;  
+     -o-text-overflow: ellipsis;  
+}
+
+.modal-content{
+    height: auto;
+}
+
+.modal-card{
+    height: auto;
+    background-color: $primary;
+    padding: 5%;
+    .modal_square {
+        background: white;
+        border-radius: 20px;
+        padding: 7%;
+    }
 }
 
 .button_center{

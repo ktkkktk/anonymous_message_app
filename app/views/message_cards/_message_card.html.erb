@@ -3,10 +3,17 @@
 
 <div class="bg-primary col-md-4  card mini-card border border-0">
   <div class="card-body">
-    <div class="square">
+    <div class="mini-square">
       <% card_string = message_card.content %>
-      <% card_string.slice!(card_str_limit, card_string.size) %>
-      <a href="#"><%= card_string %></a>
+      <%= link_to(message_card_path(message_card), remote: true) do %>
+        <div class="line-reduce"><%= "#{card_string}" %></div>
+      <% end %>
+      <div id="card-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+      <div class="mini-controls">
+        <%= link_to "favorite", "#" %> / 
+        <%= link_to "hide", "#" %> / 
+        <%= link_to "delete", message_card, method: :delete %> 
+      </div>
     </div>
   </div>
 </div>

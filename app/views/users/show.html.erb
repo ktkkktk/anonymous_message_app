@@ -9,7 +9,7 @@
   <div class="row justify-content-center h-75">
     <div class="bg-primary col-md-6  card main-card  border border-0">
       <div class="card-body">
-        <%= form_for(:message_card, url: card_path) do |f|%>
+        <%= form_for(:message_card, url: message_cards_path) do |f|%>
           <%= f.text_area :content, size: "1x12", class: 'form-control', placeholder: "メッセージを入力してください" %>
           <%= f.hidden_field :user_id, :value => params[:id] %>
           <div class="button_center">
