@@ -4,6 +4,10 @@ https://message-cards-trial-2019summer.herokuapp.com/
 email: "test@test.com"  
 password: "test"  
 
+ユーザーに匿名でメッセージ（カード）を送ることができるアプリです。
+送られたカードはメールで本人に送られるとともに、ログイン後のユーザーページで一覧になっています。
+詳細はdocumentsにまとめてあります。
+
 ==================================
 # README
 
