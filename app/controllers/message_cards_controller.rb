@@ -1,4 +1,10 @@
 class MessageCardsController < ApplicationController
+  include ApplicationHelper
+  
+  def show
+    @content = MessageCard.find(params[:id]).content
+  end
+  
   def create
     user_sent_to = User.find_by(id: params[:message_card][:user_id])
     if user_sent_to
@@ -15,6 +21,12 @@ class MessageCardsController < ApplicationController
       flash[:error] = "存在しないユーザーです"
       redirect_to root_url
     end
+  end
+  
+  def destroy
+    MessageCard.find(params[:id]).destroy
+    flash[:success] = "カードを削除しました"
+    redirect_to user_path(current_user)
   end
   
   private
