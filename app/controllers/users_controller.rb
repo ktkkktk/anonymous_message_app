@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   include ApplicationHelper
+  require 'mini_magick'
+  require 'securerandom'
   
   def create
     
@@ -14,4 +16,6 @@ class UsersController < ApplicationController
   def settings
 
   end
+  
+
 end

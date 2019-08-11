@@ -9,6 +9,5 @@ class UserMailerTest < ActionMailer::TestCase
     assert_equal "メッセージカードが届きました！", mail.subject
     assert_equal [user.email], mail.to
     assert_equal ["noreply@anonymous-message-cards.com"], mail.from
-    assert_match user.message_cards.last.content, mail.body.encoded
   end
 end
