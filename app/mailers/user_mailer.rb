@@ -12,7 +12,7 @@ class UserMailer < ApplicationMailer
   
   def message_card(user)
     @user = user
-    @content = user.message_cards.last.content
+    @content = user.message_cards.first.content
     @card_image_file_name =  uniq_file_name
     card_image_file_with_path = TEMP_IMAGE_DIR_PATH + @card_image_file_name
     create_card_image card_image_file_with_path, @content
