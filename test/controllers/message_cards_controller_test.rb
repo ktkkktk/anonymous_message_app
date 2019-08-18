@@ -12,13 +12,13 @@ class MessageCardsControllerTest < ActionDispatch::IntegrationTest
     user_sent_to = users(:tanaka)
     post message_cards_path, params: { message_card: {content: "", user_id: user_sent_to.id }}
     assert_template 'users/show'
-    assert_not flash[:error].empty?
+    assert_not flash[:danger].empty?
   end
   
   test "should not send a message to invalid user" do
     post message_cards_path, params: { message_card: {content: "Good evening", user_id: "#{User.count + 1}" }}
     assert_redirected_to root_url
-    assert_not flash[:error].empty?
+    assert_not flash[:danger].empty?
   end
   
 end

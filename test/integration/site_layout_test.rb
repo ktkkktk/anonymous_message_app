@@ -23,7 +23,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     get root_path
     assert_template "static_pages/home"
     # Check login form
-    assert_select 'form input[type=submit]', 1
+    assert_select 'form input[type=submit]', 2
   end
     
   test "home page after log-in" do

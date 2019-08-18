@@ -1,25 +1,61 @@
 
 <div class="row justify-content-center h-75">
-    <div class="bg-primary col-md-6  card main-card border border-0">
+    <div class="bg-primary col-md-6  tab-card main-card border border-0">
+      
+      <div class="card-header tab-card-header">
+        <ul class="nav nav-tabs card-header-tabs"  role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="login-tab" data-toggle="tab "href="#login" role="tab" aria-controls="login" aria-selected="true">Log in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign up</a>
+          </li>
+        </ul>
+      </div>
+      
       <div class="card-body">
-        <h2 class="card-title">メッセージカードを送ろう</h2>
-        <%= form_for(:session, url: login_path) do |f| %>
-            <%= f.label :email %>
-            <%= f.email_field :email, class: 'form-control' %>
-            <%= f.label :password %>
-            <%= f.password_field :password, class: 'form-control' %>
-            <div class="button_center">
-              <%= f.submit "Log in", class: 'btn btn-secondary' %>
-              <p class="ja-caption mt-3 mb-2">メール：test@test.com<br>パスワード：test<br>でお試しログインできます。</p>
-              
-              <%if logged_in?%>
-                <%= link_to "お試しメッセージ送信画面", user_path(1), class:"ja-caption mt-3" %>
-              <% else %>
-                <%= link_to 'お試しメッセージ送信画面', logout_path, method: :delete, class:"ja-caption mt-3" %>
-              <% end %>
-              <p class="ja-caption mt-1">メッセージを送信後、上のユーザーでログインすると<br>送ったメッセージを確認できます。</p>
-            </div>
-        <% end %>
+        <div class="tab-content">
+          <!--Login tab-->
+          <div class="tab-pane fade show active" id="login" role="tabpanel"　aria-labelledby="login-tab">
+            <h2 class="card-title">メッセージカードを送ろう</h2>
+            <%= form_for(:session, url: login_path) do |f| %>
+                <%= f.label :email, class: 'mt-3' %>
+                <%= f.email_field :email, class: 'form-control' %>
+                <%= f.label :password, class: 'mt-3' %>
+                <%= f.password_field :password, class: 'form-control' %>
+                <div class="button_center mt-4">
+                  <%= f.submit "Log in", class: 'btn btn-secondary' %>
+                  <p class="ja-caption mt-3 mb-2">メール：test@test.com<br>パスワード：test<br>でお試しログインできます。</p>
+                  
+                  <%if logged_in?%>
+                    <%= link_to "お試しメッセージ送信画面", user_path(1), class:"ja-caption mt-3" %>
+                  <% else %>
+                    <%= link_to 'お試しメッセージ送信画面', logout_path, method: :delete, class:"ja-caption mt-3" %>
+                  <% end %>
+                  <p class="ja-caption mt-1">メッセージを送信後、上のユーザーでログインすると<br>送ったメッセージを確認できます。</p>
+                </div>
+            <% end %>
+          </div>
+          <!--End of Login tab-->
+          
+          <!--Sign up tab-->
+          <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+            <h2 class="card-title">メッセージカードを送ろう</h2>
+            <%= form_for(:user, url: users_path) do |f| %>
+              <%= f.label :email, class: 'mt-3' %>
+              <%= f.email_field :email, class: 'form-control' %>
+              <%= f.label :password, class: 'mt-3' %>
+              <%= f.password_field :password, class: 'form-control' %>
+              <%= f.label :password_confirmation, class: 'mt-3' %>
+              <%= f.password_field :password_confirmation, class: 'form-control' %>
+              <div class="button_center mt-4">
+                <%= f.submit "Sign up", class: 'btn btn-secondary' %>
+              </div>
+            <% end %>
+          </div>
+          <!--End of Sign up tab-->
+          
+        </div>
       </div>
     </div>
 </div>

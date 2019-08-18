@@ -118,13 +118,38 @@ footer {
     text-align: center;
 }
 
+.tab-card{
+        padding: 0;
+    }
+    
 .main-card {
-    // width: 728px;
-    height: 455px;
+    height: auto;
     border-radius: 20px;
     margin: 5% 0%;
-    padding-top: 2%;
+    // padding-top: 2%;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    .card-header{
+        border-radius: 20px 20px 0px 0px;
+        background-color: $secondary;
+        border-style: none;
+    }
+    
+    .card-body {
+        padding: 40px;
+    }
+    
+    .nav-item {
+        margin-bottom: -2px;
+        .active {
+            border-radius: 10px 10px 0px 0px;
+            border-style: none;
+            // border-bottom: 1px;
+            // border-color: $primary;
+            background-color: $primary;
+        }
+    }
+
 }
 
 .mini-card {

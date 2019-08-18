@@ -9,6 +9,10 @@ class UserMailer < ApplicationMailer
   TEMP_IMAGE_DIR_PATH = "app/assets/images/"
   FRAME_COLOR = '#FFED8C'
   
+  def account_activation(user)
+    @user = user
+    mail to: @user.email, subject: "アカウント認証をしてください"
+  end
   
   def message_card(user)
     @user = user

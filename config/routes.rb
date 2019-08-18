@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :create]
   resources :settings, only: :show
   resources :message_cards, only: [:show, :create, :destroy]
+  resources :account_activations, only: :edit
 end

@@ -1,0 +1,5 @@
+<div align="center">
+  <h2>Message Cardアカウント登録</h2>
+  <p>下のリンクをクリックしてアカウントを有効化してください。</p>
+  <%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
+</div>
